@@ -1,0 +1,69 @@
+name: UT Bot AVAX watcher
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  watch-m1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore M1 state
+        uses: actions/cache@v4
+        with:
+          path: state
+          key: utbot-avax-m1-state
+      - name: Run M1 watcher
+        run: |
+          mkdir -p state
+          python utbot_avaxusdt_1m.py > output_m1.txt 2>&1 || true
+          cat output_m1.txt
+      - name: Save M1 state
+        if: always()
+        uses: actions/cache@v4
+        with:
+          path: state
+          key: utbot-avax-m1-state
+      - name: Push M1 to ntfy
+        run: |
+          OUTPUT=$(cat output_m1.txt)
+          if [ -n "$OUTPUT" ]; then
+            curl -s -X POST -H "Title: AVAX UT Bot 1m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+          fi
+
+  watch-m30:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore M30 state
+        uses: actions/cache@v4
+        with:
+          path: state
+          key: utbot-avax-m30-state
+      - name: Run M30 watcher
+        run: |
+          mkdir -p state
+          python utbot_avaxusdt_30m.py > output_m30.txt 2>&1 || true
+          cat output_m30.txt
+      - name: Save M30 state
+        if: always()
+        uses: actions/cache@v4
+        with:
+          path: state
+          key: utbot-avax-m30-state
+      - name: Push M30 to ntfy
+        run: |
+          OUTPUT=$(cat output_m30.txt)
+          if [ -n "$OUTPUT" ]; then
+            curl -s -X POST -H "Title: AVAX UT Bot 30m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+          fi
