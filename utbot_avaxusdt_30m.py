@@ -21,9 +21,7 @@ SYMBOL = "AVAXUSDT"
 INTERVAL = "30m"
 KEY = 3.0
 ATR_PERIOD = 4
-STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                     "..", "state", "utbot_avaxusdt_30m.json")
-STATE = os.path.normpath(STATE)
+STATE = "state/utbot_avaxusdt_30m.json"
 FAPI = "https://fapi.binance.com/fapi/v1"
 BARS = 400          # plenty for ATR(4)/TS convergence
 U = dt.timezone.utc
