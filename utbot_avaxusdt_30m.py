@@ -136,7 +136,7 @@ def main():
     # FIRST RUN: establish a baseline and stay silent. Without this, a fresh
     # state would announce every historical signal as if it were new.
     if last_seen is None:
-        state["last_notified_bar"] = cur_bar
+        state["last_notified_bar"] = cur_bar - 1800000  # 30 minutes back so next run checks current bar
         state["last_checked_utc"] = dt.datetime.now(tz=U).isoformat(timespec="seconds")
         state["last_close"] = closes[last_closed]
         state["primed_utc"] = dt.datetime.now(tz=U).isoformat(timespec="seconds")
