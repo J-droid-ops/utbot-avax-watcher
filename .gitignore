@@ -1,0 +1,6 @@
+dbg.txt
+dbg2.txt
+dbg3.txt
+output_*.txt
+state/
+__pycache__/
