@@ -1,0 +1,501 @@
+watch-m1	Set up job	﻿2026-10-26T17:08:11.0128564Z Current runner version: '2.338.0'
+watch-m1	Set up job	2026-10-26T17:08:11.0157849Z ##[group]Runner Image Provisioner
+watch-m1	Set up job	2026-10-26T17:08:11.0158861Z Hosted Compute Agent
+watch-m1	Set up job	2026-10-26T17:08:11.0159604Z Version: 20261021.618
+watch-m1	Set up job	2026-10-26T17:08:11.0160436Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+watch-m1	Set up job	2026-10-26T17:08:11.0161339Z Build Date: 2026-10-21T00:45:21Z
+watch-m1	Set up job	2026-10-26T17:08:11.0162365Z Worker ID: {c9897e69-dfc5-453d-a0fa-fb6d55e7fcb1}
+watch-m1	Set up job	2026-10-26T17:08:11.0163432Z Region: northcentralus
+watch-m1	Set up job	2026-10-26T17:08:11.0164150Z Cloud: Azure
+watch-m1	Set up job	2026-10-26T17:08:11.0164881Z ##[endgroup]
+watch-m1	Set up job	2026-10-26T17:08:11.0166807Z ##[group]Operating System
+watch-m1	Set up job	2026-10-26T17:08:11.0167699Z Ubuntu
+watch-m1	Set up job	2026-10-26T17:08:11.0168445Z 24.04.5
+watch-m1	Set up job	2026-10-26T17:08:11.0169061Z LTS
+watch-m1	Set up job	2026-10-26T17:08:11.0169789Z ##[endgroup]
+watch-m1	Set up job	2026-10-26T17:08:11.0170504Z ##[group]Runner Image
+watch-m1	Set up job	2026-10-26T17:08:11.0171304Z Image: ubuntu-24.04
+watch-m1	Set up job	2026-10-26T17:08:11.0172046Z Version: 20261012.334.1
+watch-m1	Set up job	2026-10-26T17:08:11.0173620Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+watch-m1	Set up job	2026-10-26T17:08:11.0175976Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+watch-m1	Set up job	2026-10-26T17:08:11.0177278Z ##[endgroup]
+watch-m1	Set up job	2026-10-26T17:08:11.0179175Z ##[group]GITHUB_TOKEN Permissions
+watch-m1	Set up job	2026-10-26T17:08:11.0181439Z Contents: read
+watch-m1	Set up job	2026-10-26T17:08:11.0182336Z Metadata: read
+watch-m1	Set up job	2026-10-26T17:08:11.0183267Z Packages: read
+watch-m1	Set up job	2026-10-26T17:08:11.0183943Z ##[endgroup]
+watch-m1	Set up job	2026-10-26T17:08:11.0186520Z Secret source: Actions
+watch-m1	Set up job	2026-10-26T17:08:11.0187616Z Cache mode: write
+watch-m1	Set up job	2026-10-26T17:08:11.0188849Z Prepare workflow directory
+watch-m1	Set up job	2026-10-26T17:08:11.0469908Z Prepare all required actions
+watch-m1	Set up job	2026-10-26T17:08:11.0512119Z Getting action download info
+watch-m1	Set up job	2026-10-26T17:08:11.3231702Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+watch-m1	Set up job	2026-10-26T17:08:11.4880112Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+watch-m1	Set up job	2026-10-26T17:08:11.5912182Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+watch-m1	Set up job	2026-10-26T17:08:12.0474804Z Complete job name: watch-m1
+watch-m1	Run actions/checkout@v4	﻿2026-10-26T17:08:12.1208222Z ##[group]Run actions/checkout@v4
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1209047Z with:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1209511Z   repository: J-droid-ops/utbot-avax-watcher
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1216248Z   token: ***
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1216680Z   ssh-strict: true
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1217109Z   ssh-user: git
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1217549Z   persist-credentials: true
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1218050Z   clean: true
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1218494Z   sparse-checkout-cone-mode: true
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1219062Z   fetch-depth: 1
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1219500Z   fetch-tags: false
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1219942Z   show-progress: true
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1220393Z   lfs: false
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1220786Z   submodules: false
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1221258Z   set-safe-directory: true
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1221791Z   allow-unsafe-pr-checkout: false
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.1222602Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2020507Z Syncing repository: J-droid-ops/utbot-avax-watcher
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2023350Z ##[group]Getting Git version info
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2024835Z Working directory is '/home/runner/work/utbot-avax-watcher/utbot-avax-watcher'
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2026951Z [command]/usr/bin/git version
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2113564Z git version 2.55.0
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2140090Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2147768Z Temporarily overriding HOME='/home/runner/work/_temp/f7f0e3d3-5ac1-4fb3-96de-511103ffad56' before making global git config changes
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2150679Z Adding repository directory to the temporary git global config as a safe directory
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2153279Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/utbot-avax-watcher/utbot-avax-watcher
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2409870Z Deleting the contents of '/home/runner/work/utbot-avax-watcher/utbot-avax-watcher'
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2420097Z ##[group]Initializing the repository
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2443705Z [command]/usr/bin/git init /home/runner/work/utbot-avax-watcher/utbot-avax-watcher
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2526218Z hint: Using 'master' as the name for the initial branch. This default branch name
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2528370Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2533657Z hint: to use in all of your new repositories, which will suppress this warning,
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2535600Z hint: call:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2536520Z hint:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2537415Z hint: 	git config --global init.defaultBranch <name>
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2538482Z hint:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2539453Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2541324Z hint: 'development'. The just-created branch can be renamed via this command:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2542743Z hint:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2543446Z hint: 	git branch -m <name>
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2544171Z hint:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2545257Z hint: Disable this message with "git config set advice.defaultBranchName false"
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2547563Z Initialized empty Git repository in /home/runner/work/utbot-avax-watcher/utbot-avax-watcher/.git/
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2551342Z [command]/usr/bin/git remote add origin https://github.com/J-droid-ops/utbot-avax-watcher
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2587717Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2588877Z ##[group]Disabling automatic garbage collection
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2590495Z [command]/usr/bin/git config --local gc.auto 0
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2620885Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2621633Z ##[group]Setting up auth
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2626083Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.2654645Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3134476Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3166633Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3364684Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3400351Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3601881Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3637323Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3637989Z ##[group]Fetching the repository
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.3645289Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ac48c6468b33903bfa2d069f17a2a0b104dfdbcc:refs/remotes/origin/main
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.7980011Z From https://github.com/J-droid-ops/utbot-avax-watcher
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.7980676Z  * [new ref]         ac48c6468b33903bfa2d069f17a2a0b104dfdbcc -> origin/main
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.7983291Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.7983746Z ##[group]Determining the checkout info
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.7990172Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.7991855Z [command]/usr/bin/git sparse-checkout disable
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8036893Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8063870Z ##[group]Checking out the ref
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8067431Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8120611Z Switched to a new branch 'main'
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8125619Z branch 'main' set up to track 'origin/main'.
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8129689Z ##[endgroup]
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8165086Z [command]/usr/bin/git log -1 --format=%H
+watch-m1	Run actions/checkout@v4	2026-10-26T17:08:12.8186968Z ac48c6468b33903bfa2d069f17a2a0b104dfdbcc
+watch-m1	Run actions/setup-python@v5	﻿2026-10-26T17:08:12.8409660Z ##[group]Run actions/setup-python@v5
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8409950Z with:
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8410171Z   python-version: 3.12
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8466024Z   check-latest: false
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8468244Z   token: ***
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8468476Z   update-environment: true
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8468733Z   allow-prereleases: false
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8468968Z   freethreaded: false
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.8469182Z ##[endgroup]
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:12.9497118Z ##[group]Installed versions
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:13.0254824Z (node:2034) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:13.0255894Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:13.0256762Z Successfully set up CPython (3.12.15)
+watch-m1	Run actions/setup-python@v5	2026-10-26T17:08:13.0257466Z ##[endgroup]
+watch-m1	Restore M1 state	﻿2026-10-26T17:08:13.0519959Z ##[group]Run actions/cache@v4
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0520455Z with:
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0520755Z   path: state
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0521106Z   key: utbot-avax-m1-state-40365759080
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0521555Z   restore-keys: utbot-avax-m1-state-
+watch-m1	Restore M1 state	
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0521998Z   enableCrossOsArchive: false
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0522376Z   fail-on-cache-miss: false
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0522737Z   lookup-only: false
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0523241Z   save-always: false
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0523562Z env:
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0523969Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0524623Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0525245Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0525779Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0526324Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0526874Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m1	Restore M1 state	2026-10-26T17:08:13.0527422Z ##[endgroup]
+watch-m1	Restore M1 state	2026-10-26T17:08:13.1472668Z (node:2043) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m1	Restore M1 state	2026-10-26T17:08:13.1473955Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m1	Restore M1 state	2026-10-26T17:08:13.3011483Z Cache hit for restore-key: utbot-avax-m1-state-40365719349
+watch-m1	Restore M1 state	2026-10-26T17:08:13.3090322Z (node:2043) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+watch-m1	Restore M1 state	2026-10-26T17:08:13.4373065Z Received 347 of 347 (100.0%), 0.0 MBs/sec
+watch-m1	Restore M1 state	2026-10-26T17:08:13.4373693Z Cache Size: ~0 MB (347 B)
+watch-m1	Restore M1 state	2026-10-26T17:08:13.4394032Z [command]/usr/bin/tar -xf /home/runner/work/_temp/df084dce-92a1-4cf1-93f2-180ff738bbd7/cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --use-compress-program unzstd
+watch-m1	Restore M1 state	2026-10-26T17:08:13.4450031Z Cache restored successfully
+watch-m1	Restore M1 state	2026-10-26T17:08:13.4510000Z Cache restored from key: utbot-avax-m1-state-40365719349
+watch-m1	Run M1 watcher	﻿2026-10-26T17:08:13.4597734Z ##[group]Run mkdir -p state
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.4598085Z ^[[36;1mmkdir -p state^[[0m
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.4598440Z ^[[36;1mpython utbot_avaxusdt_1m.py > output_m1.txt 2>&1 || true^[[0m
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.4598785Z ^[[36;1mcat output_m1.txt^[[0m
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6505533Z shell: /usr/bin/bash -e {0}
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6505916Z env:
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6506211Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6506627Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6507037Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6507395Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6507748Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6508106Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m1	Run M1 watcher	2026-10-26T17:08:13.6508431Z ##[endgroup]
+watch-m1	Save M1 state	﻿2026-10-26T17:08:14.1679888Z ##[group]Run actions/cache@v4
+watch-m1	Save M1 state	2026-10-26T17:08:14.1680138Z with:
+watch-m1	Save M1 state	2026-10-26T17:08:14.1680312Z   path: state
+watch-m1	Save M1 state	2026-10-26T17:08:14.1680513Z   key: utbot-avax-m1-state-40365759080
+watch-m1	Save M1 state	2026-10-26T17:08:14.1680905Z   restore-keys: utbot-avax-m1-state-
+watch-m1	Save M1 state	
+watch-m1	Save M1 state	2026-10-26T17:08:14.1681143Z   enableCrossOsArchive: false
+watch-m1	Save M1 state	2026-10-26T17:08:14.1681351Z   fail-on-cache-miss: false
+watch-m1	Save M1 state	2026-10-26T17:08:14.1681566Z   lookup-only: false
+watch-m1	Save M1 state	2026-10-26T17:08:14.1681754Z   save-always: false
+watch-m1	Save M1 state	2026-10-26T17:08:14.1681925Z env:
+watch-m1	Save M1 state	2026-10-26T17:08:14.1682155Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Save M1 state	2026-10-26T17:08:14.1682495Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m1	Save M1 state	2026-10-26T17:08:14.1682833Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Save M1 state	2026-10-26T17:08:14.1683362Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Save M1 state	2026-10-26T17:08:14.1683670Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Save M1 state	2026-10-26T17:08:14.1684056Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m1	Save M1 state	2026-10-26T17:08:14.1684350Z ##[endgroup]
+watch-m1	Save M1 state	2026-10-26T17:08:14.2532837Z (node:2065) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m1	Save M1 state	2026-10-26T17:08:14.2534024Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m1	Save M1 state	2026-10-26T17:08:14.4034683Z Cache hit for restore-key: utbot-avax-m1-state-40365719349
+watch-m1	Save M1 state	2026-10-26T17:08:14.4110798Z (node:2065) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+watch-m1	Save M1 state	2026-10-26T17:08:14.5555220Z Received 347 of 347 (100.0%), 0.0 MBs/sec
+watch-m1	Save M1 state	2026-10-26T17:08:14.5555725Z Cache Size: ~0 MB (347 B)
+watch-m1	Save M1 state	2026-10-26T17:08:14.5575140Z [command]/usr/bin/tar -xf /home/runner/work/_temp/e28c6454-67eb-4cc3-9810-3609121ec8d6/cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --use-compress-program unzstd
+watch-m1	Save M1 state	2026-10-26T17:08:14.5615102Z Cache restored successfully
+watch-m1	Save M1 state	2026-10-26T17:08:14.5675157Z Cache restored from key: utbot-avax-m1-state-40365719349
+watch-m1	Push M1 to ntfy	﻿2026-10-26T17:08:14.5753908Z ##[group]Run OUTPUT=$(cat output_m1.txt)
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5754228Z ^[[36;1mOUTPUT=$(cat output_m1.txt)^[[0m
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5754468Z ^[[36;1mif [ -n "$OUTPUT" ]; then^[[0m
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5755155Z ^[[36;1m  curl -s -X POST -H "Title: AVAX UT Bot 1m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/***"^[[0m
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5755638Z ^[[36;1mfi^[[0m
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5817477Z shell: /usr/bin/bash -e {0}
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5817715Z env:
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5817960Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5818326Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5818682Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5819001Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5819315Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5819630Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m1	Push M1 to ntfy	2026-10-26T17:08:14.5819938Z ##[endgroup]
+watch-m1	Post Save M1 state	﻿2026-10-26T17:08:14.5971628Z Post job cleanup.
+watch-m1	Post Save M1 state	2026-10-26T17:08:14.6855429Z (node:2084) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m1	Post Save M1 state	2026-10-26T17:08:14.6856181Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m1	Post Save M1 state	2026-10-26T17:08:14.6977360Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --files-from manifest.txt --use-compress-program zstdmt
+watch-m1	Post Save M1 state	2026-10-26T17:08:14.8438782Z (node:2084) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+watch-m1	Post Save M1 state	2026-10-26T17:08:14.9518565Z Sent 347 of 347 (100.0%), 0.0 MBs/sec
+watch-m1	Post Save M1 state	2026-10-26T17:08:15.0219560Z Cache saved with key: utbot-avax-m1-state-40365759080
+watch-m1	Post Restore M1 state	﻿2026-10-26T17:08:15.0321303Z Post job cleanup.
+watch-m1	Post Restore M1 state	2026-10-26T17:08:15.1172531Z (node:2105) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m1	Post Restore M1 state	2026-10-26T17:08:15.1173781Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m1	Post Restore M1 state	2026-10-26T17:08:15.1292712Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --files-from manifest.txt --use-compress-program zstdmt
+watch-m1	Post Restore M1 state	2026-10-26T17:08:15.3158763Z Failed to save: Unable to reserve cache with key utbot-avax-m1-state-40365759080, another job may be creating this cache.
+watch-m1	Post Run actions/setup-python@v5	﻿2026-10-26T17:08:15.3278700Z Post job cleanup.
+watch-m1	Post Run actions/setup-python@v5	2026-10-26T17:08:15.4219048Z (node:2125) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m1	Post Run actions/setup-python@v5	2026-10-26T17:08:15.4219706Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m1	Post Run actions/checkout@v4	﻿2026-10-26T17:08:15.4389397Z Post job cleanup.
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5091103Z [command]/usr/bin/git version
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5126006Z git version 2.55.0
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5156138Z Temporarily overriding HOME='/home/runner/work/_temp/c0869374-293e-46b9-80b7-39dd2c7bccac' before making global git config changes
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5157267Z Adding repository directory to the temporary git global config as a safe directory
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5158756Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/utbot-avax-watcher/utbot-avax-watcher
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5189467Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5216791Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5426869Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5449213Z http.https://github.com/.extraheader
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5458607Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5493781Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5700514Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+watch-m1	Post Run actions/checkout@v4	2026-10-26T17:08:15.5732659Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+watch-m1	Complete job	﻿2026-10-26T17:08:15.6056165Z Cleaning up orphan processes
+watch-m1	Complete job	2026-10-26T17:08:15.6360437Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@v4, actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+watch-m30	Set up job	﻿2026-10-26T17:08:11.0056569Z Current runner version: '2.338.0'
+watch-m30	Set up job	2026-10-26T17:08:11.0080085Z ##[group]Runner Image Provisioner
+watch-m30	Set up job	2026-10-26T17:08:11.0080975Z Hosted Compute Agent
+watch-m30	Set up job	2026-10-26T17:08:11.0081499Z Version: 20261021.618
+watch-m30	Set up job	2026-10-26T17:08:11.0082099Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+watch-m30	Set up job	2026-10-26T17:08:11.0082683Z Build Date: 2026-10-21T00:45:21Z
+watch-m30	Set up job	2026-10-26T17:08:11.0083254Z Worker ID: {ea03d47e-c107-4d2c-be84-07033bc16408}
+watch-m30	Set up job	2026-10-26T17:08:11.0083942Z Region: northcentralus
+watch-m30	Set up job	2026-10-26T17:08:11.0084441Z Cloud: Azure
+watch-m30	Set up job	2026-10-26T17:08:11.0085257Z ##[endgroup]
+watch-m30	Set up job	2026-10-26T17:08:11.0086545Z ##[group]Operating System
+watch-m30	Set up job	2026-10-26T17:08:11.0087041Z Ubuntu
+watch-m30	Set up job	2026-10-26T17:08:11.0087556Z 24.04.5
+watch-m30	Set up job	2026-10-26T17:08:11.0088016Z LTS
+watch-m30	Set up job	2026-10-26T17:08:11.0088477Z ##[endgroup]
+watch-m30	Set up job	2026-10-26T17:08:11.0088951Z ##[group]Runner Image
+watch-m30	Set up job	2026-10-26T17:08:11.0089470Z Image: ubuntu-24.04
+watch-m30	Set up job	2026-10-26T17:08:11.0090003Z Version: 20261012.334.1
+watch-m30	Set up job	2026-10-26T17:08:11.0090981Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+watch-m30	Set up job	2026-10-26T17:08:11.0092413Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+watch-m30	Set up job	2026-10-26T17:08:11.0093187Z ##[endgroup]
+watch-m30	Set up job	2026-10-26T17:08:11.0094262Z ##[group]GITHUB_TOKEN Permissions
+watch-m30	Set up job	2026-10-26T17:08:11.0096258Z Contents: read
+watch-m30	Set up job	2026-10-26T17:08:11.0096883Z Metadata: read
+watch-m30	Set up job	2026-10-26T17:08:11.0097351Z Packages: read
+watch-m30	Set up job	2026-10-26T17:08:11.0098276Z ##[endgroup]
+watch-m30	Set up job	2026-10-26T17:08:11.0100120Z Secret source: Actions
+watch-m30	Set up job	2026-10-26T17:08:11.0100910Z Cache mode: write
+watch-m30	Set up job	2026-10-26T17:08:11.0101907Z Prepare workflow directory
+watch-m30	Set up job	2026-10-26T17:08:11.0376442Z Prepare all required actions
+watch-m30	Set up job	2026-10-26T17:08:11.0418257Z Getting action download info
+watch-m30	Set up job	2026-10-26T17:08:11.3248683Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+watch-m30	Set up job	2026-10-26T17:08:11.4361878Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+watch-m30	Set up job	2026-10-26T17:08:11.5386910Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+watch-m30	Set up job	2026-10-26T17:08:11.7836227Z Complete job name: watch-m30
+watch-m30	Run actions/checkout@v4	﻿2026-10-26T17:08:11.8767291Z ##[group]Run actions/checkout@v4
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8768001Z with:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8768404Z   repository: J-droid-ops/utbot-avax-watcher
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8771873Z   token: ***
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8772232Z   ssh-strict: true
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8772598Z   ssh-user: git
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8772960Z   persist-credentials: true
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8773353Z   clean: true
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8773711Z   sparse-checkout-cone-mode: true
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8774129Z   fetch-depth: 1
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8774498Z   fetch-tags: false
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8775011Z   show-progress: true
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8775389Z   lfs: false
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8775738Z   submodules: false
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8776113Z   set-safe-directory: true
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8776532Z   allow-unsafe-pr-checkout: false
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.8777113Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9659752Z Syncing repository: J-droid-ops/utbot-avax-watcher
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9661788Z ##[group]Getting Git version info
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9662486Z Working directory is '/home/runner/work/utbot-avax-watcher/utbot-avax-watcher'
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9663922Z [command]/usr/bin/git version
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9734365Z git version 2.55.0
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9752513Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9768505Z Temporarily overriding HOME='/home/runner/work/_temp/aca12f79-8229-4d1a-8a2a-e7b06bfcde22' before making global git config changes
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9771010Z Adding repository directory to the temporary git global config as a safe directory
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9775953Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/utbot-avax-watcher/utbot-avax-watcher
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9883218Z Deleting the contents of '/home/runner/work/utbot-avax-watcher/utbot-avax-watcher'
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9889393Z ##[group]Initializing the repository
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9894409Z [command]/usr/bin/git init /home/runner/work/utbot-avax-watcher/utbot-avax-watcher
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:11.9991712Z hint: Using 'master' as the name for the initial branch. This default branch name
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0006239Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0012302Z hint: to use in all of your new repositories, which will suppress this warning,
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0013480Z hint: call:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0014006Z hint:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0014834Z hint: 	git config --global init.defaultBranch <name>
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0015640Z hint:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0016363Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0017535Z hint: 'development'. The just-created branch can be renamed via this command:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0018478Z hint:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0018999Z hint: 	git branch -m <name>
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0019584Z hint:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0020382Z hint: Disable this message with "git config set advice.defaultBranchName false"
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0021908Z Initialized empty Git repository in /home/runner/work/utbot-avax-watcher/utbot-avax-watcher/.git/
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0024410Z [command]/usr/bin/git remote add origin https://github.com/J-droid-ops/utbot-avax-watcher
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0062611Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0063616Z ##[group]Disabling automatic garbage collection
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0067519Z [command]/usr/bin/git config --local gc.auto 0
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0104389Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0106002Z ##[group]Setting up auth
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0112559Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0150296Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0535340Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0575187Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0809585Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.0846450Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.1061415Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.1109572Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.1110403Z ##[group]Fetching the repository
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.1118377Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ac48c6468b33903bfa2d069f17a2a0b104dfdbcc:refs/remotes/origin/main
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3864896Z From https://github.com/J-droid-ops/utbot-avax-watcher
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3865818Z  * [new ref]         ac48c6468b33903bfa2d069f17a2a0b104dfdbcc -> origin/main
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3868093Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3868711Z ##[group]Determining the checkout info
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3875258Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3877235Z [command]/usr/bin/git sparse-checkout disable
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.3988191Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4020944Z ##[group]Checking out the ref
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4025597Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4090145Z Switched to a new branch 'main'
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4093721Z branch 'main' set up to track 'origin/main'.
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4099517Z ##[endgroup]
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4141252Z [command]/usr/bin/git log -1 --format=%H
+watch-m30	Run actions/checkout@v4	2026-10-26T17:08:12.4166779Z ac48c6468b33903bfa2d069f17a2a0b104dfdbcc
+watch-m30	Run actions/setup-python@v5	﻿2026-10-26T17:08:12.4494121Z ##[group]Run actions/setup-python@v5
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4494638Z with:
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4495193Z   python-version: 3.12
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4495802Z   check-latest: false
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4499090Z   token: ***
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4499431Z   update-environment: true
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4499835Z   allow-prereleases: false
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4500220Z   freethreaded: false
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.4500575Z ##[endgroup]
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.5648217Z ##[group]Installed versions
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.5739003Z (node:2055) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.5740728Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.5741674Z Successfully set up CPython (3.12.15)
+watch-m30	Run actions/setup-python@v5	2026-10-26T17:08:12.5742690Z ##[endgroup]
+watch-m30	Restore M30 state	﻿2026-10-26T17:08:12.5964991Z ##[group]Run actions/cache@v4
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5966154Z with:
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5966655Z   path: state
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5967298Z   key: utbot-avax-m30-state-40365759080
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5968264Z   restore-keys: utbot-avax-m30-state-
+watch-m30	Restore M30 state	
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5969111Z   enableCrossOsArchive: false
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5969717Z   fail-on-cache-miss: false
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5970277Z   lookup-only: false
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5970827Z   save-always: false
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5971338Z env:
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5971943Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5972956Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5973788Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5974385Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5975226Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5976060Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m30	Restore M30 state	2026-10-26T17:08:12.5976847Z ##[endgroup]
+watch-m30	Restore M30 state	2026-10-26T17:08:12.6874311Z (node:2063) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m30	Restore M30 state	2026-10-26T17:08:12.6875637Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m30	Restore M30 state	2026-10-26T17:08:12.7944533Z Cache hit for restore-key: utbot-avax-m30-state-40365719349
+watch-m30	Restore M30 state	2026-10-26T17:08:12.8033391Z (node:2063) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+watch-m30	Restore M30 state	2026-10-26T17:08:12.9355133Z Received 347 of 347 (100.0%), 0.0 MBs/sec
+watch-m30	Restore M30 state	2026-10-26T17:08:12.9356235Z Cache Size: ~0 MB (347 B)
+watch-m30	Restore M30 state	2026-10-26T17:08:12.9377263Z [command]/usr/bin/tar -xf /home/runner/work/_temp/4dcd1fec-810c-487d-9115-61430c4cec7d/cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --use-compress-program unzstd
+watch-m30	Restore M30 state	2026-10-26T17:08:12.9438460Z Cache restored successfully
+watch-m30	Restore M30 state	2026-10-26T17:08:12.9503517Z Cache restored from key: utbot-avax-m30-state-40365719349
+watch-m30	Debug Binance reachability	﻿2026-10-26T17:08:12.9637663Z ##[group]Run python3 - <<'EOF'
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9638762Z ^[[36;1mpython3 - <<'EOF'^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9639745Z ^[[36;1mimport urllib.request, json, sys^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9641386Z ^[[36;1murl = "https://fapi.binance.com/fapi/v1/klines?symbol=AVAXUSDT&interval=30m&limit=5"^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9642937Z ^[[36;1mtry:^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9644052Z ^[[36;1m    req = urllib.request.Request(url, headers={"User-Agent": "curl/8"})^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9645735Z ^[[36;1m    with urllib.request.urlopen(req, timeout=25) as r:^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9646919Z ^[[36;1m        d = json.load(r)^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9648084Z ^[[36;1m    print("BINANCE OK - bars:", len(d), "http", r.status)^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9649309Z ^[[36;1mexcept Exception as e:^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9650423Z ^[[36;1m    print("BINANCE FAILED:", type(e).__name__, "->", e)^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9651594Z ^[[36;1m    sys.exit(0)^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9652420Z ^[[36;1mEOF^[[0m
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9886286Z shell: /usr/bin/bash -e {0}
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9887422Z env:
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9888355Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9890109Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9891605Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9892969Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9894356Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9896066Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m30	Debug Binance reachability	2026-10-26T17:08:12.9897242Z ##[endgroup]
+watch-m30	Debug Binance reachability	2026-10-26T17:08:13.2590883Z BINANCE FAILED: HTTPError -> HTTP Error 451: 
+watch-m30	Run M30 watcher	﻿2026-10-26T17:08:13.2716902Z ##[group]Run mkdir -p state
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2717600Z ^[[36;1mmkdir -p state^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2718172Z ^[[36;1mecho "=== STATE BEFORE ==="^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2718870Z ^[[36;1mcat state/utbot_avaxusdt_30m.json 2>/dev/null || echo "(none)"^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2719611Z ^[[36;1mpython utbot_avaxusdt_30m.py > output_m30.txt 2>&1 || true^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2720254Z ^[[36;1mecho "=== SCRIPT OUTPUT ==="^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2720720Z ^[[36;1mcat output_m30.txt^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2721082Z ^[[36;1mecho "=== STATE AFTER ==="^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2721523Z ^[[36;1mcat state/utbot_avaxusdt_30m.json 2>/dev/null || echo "(none)"^[[0m
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2780566Z shell: /usr/bin/bash -e {0}
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2780992Z env:
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2781388Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2781901Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2782398Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2782925Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2783389Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2783862Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2784278Z ##[endgroup]
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2882890Z === STATE BEFORE ===
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.2892455Z (none)
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.3813847Z === SCRIPT OUTPUT ===
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.3824493Z === STATE AFTER ===
+watch-m30	Run M30 watcher	2026-10-26T17:08:13.3835097Z (none)
+watch-m30	Save M30 state	﻿2026-10-26T17:08:13.3905244Z ##[group]Run actions/cache@v4
+watch-m30	Save M30 state	2026-10-26T17:08:13.3905647Z with:
+watch-m30	Save M30 state	2026-10-26T17:08:13.3905943Z   path: state
+watch-m30	Save M30 state	2026-10-26T17:08:13.3906254Z   key: utbot-avax-m30-state-40365759080
+watch-m30	Save M30 state	2026-10-26T17:08:13.3906631Z   restore-keys: utbot-avax-m30-state-
+watch-m30	Save M30 state	
+watch-m30	Save M30 state	2026-10-26T17:08:13.3907018Z   enableCrossOsArchive: false
+watch-m30	Save M30 state	2026-10-26T17:08:13.3907367Z   fail-on-cache-miss: false
+watch-m30	Save M30 state	2026-10-26T17:08:13.3907694Z   lookup-only: false
+watch-m30	Save M30 state	2026-10-26T17:08:13.3908010Z   save-always: false
+watch-m30	Save M30 state	2026-10-26T17:08:13.3908315Z env:
+watch-m30	Save M30 state	2026-10-26T17:08:13.3908662Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Save M30 state	2026-10-26T17:08:13.3909155Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m30	Save M30 state	2026-10-26T17:08:13.3909654Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Save M30 state	2026-10-26T17:08:13.3910097Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Save M30 state	2026-10-26T17:08:13.3910568Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Save M30 state	2026-10-26T17:08:13.3911027Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m30	Save M30 state	2026-10-26T17:08:13.3911468Z ##[endgroup]
+watch-m30	Save M30 state	2026-10-26T17:08:13.4841214Z (node:2088) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m30	Save M30 state	2026-10-26T17:08:13.4842066Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m30	Save M30 state	2026-10-26T17:08:13.6038612Z Cache hit for restore-key: utbot-avax-m30-state-40365719349
+watch-m30	Save M30 state	2026-10-26T17:08:13.6124185Z (node:2088) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+watch-m30	Save M30 state	2026-10-26T17:08:13.7561050Z Received 347 of 347 (100.0%), 0.0 MBs/sec
+watch-m30	Save M30 state	2026-10-26T17:08:13.7561726Z Cache Size: ~0 MB (347 B)
+watch-m30	Save M30 state	2026-10-26T17:08:13.7581427Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7c6b2b60-0e03-4c98-ac17-1ff34dec685b/cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --use-compress-program unzstd
+watch-m30	Save M30 state	2026-10-26T17:08:13.7623865Z Cache restored successfully
+watch-m30	Save M30 state	2026-10-26T17:08:13.7688958Z Cache restored from key: utbot-avax-m30-state-40365719349
+watch-m30	Push M30 to ntfy	﻿2026-10-26T17:08:13.7783798Z ##[group]Run OUTPUT=$(cat output_m30.txt)
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7784266Z ^[[36;1mOUTPUT=$(cat output_m30.txt)^[[0m
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7784657Z ^[[36;1mif [ -n "$OUTPUT" ]; then^[[0m
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7786217Z ^[[36;1m  curl -s -X POST -H "Title: AVAX UT Bot 30m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/***"^[[0m
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7786917Z ^[[36;1mfi^[[0m
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7848737Z shell: /usr/bin/bash -e {0}
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7849120Z env:
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7849494Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7850037Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7850528Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7850997Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7851458Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7851908Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+watch-m30	Push M30 to ntfy	2026-10-26T17:08:13.7852360Z ##[endgroup]
+watch-m30	Post Save M30 state	﻿2026-10-26T17:08:13.8069198Z Post job cleanup.
+watch-m30	Post Save M30 state	2026-10-26T17:08:13.8992867Z (node:2108) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m30	Post Save M30 state	2026-10-26T17:08:13.8993693Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m30	Post Save M30 state	2026-10-26T17:08:13.9120904Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --files-from manifest.txt --use-compress-program zstdmt
+watch-m30	Post Save M30 state	2026-10-26T17:08:14.0484599Z (node:2108) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+watch-m30	Post Save M30 state	2026-10-26T17:08:14.1696716Z Sent 347 of 347 (100.0%), 0.0 MBs/sec
+watch-m30	Post Save M30 state	2026-10-26T17:08:14.2472217Z Cache saved with key: utbot-avax-m30-state-40365759080
+watch-m30	Post Restore M30 state	﻿2026-10-26T17:08:14.2592369Z Post job cleanup.
+watch-m30	Post Restore M30 state	2026-10-26T17:08:14.3524836Z (node:2128) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m30	Post Restore M30 state	2026-10-26T17:08:14.3525617Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m30	Post Restore M30 state	2026-10-26T17:08:14.3658784Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/utbot-avax-watcher/utbot-avax-watcher --files-from manifest.txt --use-compress-program zstdmt
+watch-m30	Post Restore M30 state	2026-10-26T17:08:14.4869804Z Failed to save: Unable to reserve cache with key utbot-avax-m30-state-40365759080, another job may be creating this cache.
+watch-m30	Post Run actions/setup-python@v5	﻿2026-10-26T17:08:14.4983490Z Post job cleanup.
+watch-m30	Post Run actions/setup-python@v5	2026-10-26T17:08:14.5986812Z (node:2148) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+watch-m30	Post Run actions/setup-python@v5	2026-10-26T17:08:14.5987567Z (Use `node --trace-deprecation ...` to show where the warning was created)
+watch-m30	Post Run actions/checkout@v4	﻿2026-10-26T17:08:14.6200398Z Post job cleanup.
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.6969153Z [command]/usr/bin/git version
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7007068Z git version 2.55.0
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7040868Z Temporarily overriding HOME='/home/runner/work/_temp/95607294-5c5a-4f5e-8faa-bde274c7b534' before making global git config changes
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7042222Z Adding repository directory to the temporary git global config as a safe directory
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7048814Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/utbot-avax-watcher/utbot-avax-watcher
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7096309Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7139702Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7433749Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7466141Z http.https://github.com/.extraheader
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7479285Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7527127Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7838607Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+watch-m30	Post Run actions/checkout@v4	2026-10-26T17:08:14.7870200Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+watch-m30	Complete job	﻿2026-10-26T17:08:14.8237667Z Cleaning up orphan processes
+watch-m30	Complete job	2026-10-26T17:08:14.8580940Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@v4, actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

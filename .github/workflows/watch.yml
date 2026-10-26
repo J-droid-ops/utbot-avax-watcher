@@ -54,6 +54,26 @@ jobs:
             curl -s -X POST -H "Title: AVAX UT Bot 1m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
           fi
 
+      # Fail loudly if the watcher did not just update its state. Without this a
+      # blocked data endpoint looks identical to "no new signals" forever.
+      - name: Assert M1 watcher is alive
+        if: always()
+        run: |
+          python3 - <<'EOF'
+          import json, datetime as dt, sys
+          try:
+              s = json.load(open("state/utbot_avaxusdt_1m.json"))
+          except Exception as e:
+              print("M1 state missing/unreadable:", e); sys.exit(1)
+          last = s.get("last_checked_utc")
+          if not last:
+              print("M1 state has no last_checked_utc"); sys.exit(1)
+          t = dt.datetime.fromisoformat(last).astimezone(dt.timezone.utc)
+          age = (dt.datetime.now(dt.timezone.utc) - t).total_seconds()
+          print(f"M1 state age: {age:.0f}s")
+          sys.exit(1 if age > 900 else 0)
+          EOF
+
   watch-m30:
     runs-on: ubuntu-latest
     steps:
@@ -70,37 +90,11 @@ jobs:
           restore-keys: |
             utbot-avax-m30-state-
 
-      - name: Debug endpoint reachability
-        run: |
-          python3 - <<'EOF'
-          import urllib.request, json
-          tests = [
-            ("binance SPOT (data-api)", "https://data-api.binance.vision/api/v3/klines?symbol=AVAXUSDT&interval=30m&limit=3"),
-            ("binance FUTURES (fapi)",  "https://fapi.binance.com/fapi/v1/klines?symbol=AVAXUSDT&interval=30m&limit=3"),
-            ("bybit LINEAR",            "https://api.bybit.com/v5/market/kline?category=linear&symbol=AVAXUSDT&interval=30&limit=3"),
-            ("okx SWAP",                "https://www.okx.com/api/v5/market/candles?instId=AVAX-USDT-SWAP&bar=30m&limit=3"),
-            ("gateio FUTURES",          "https://api.gateio.ws/api/v4/futures/usdt/candlesticks?contract=AVAX_USDT&interval=30m&limit=3"),
-          ]
-          for name, url in tests:
-              try:
-                  req = urllib.request.Request(url, headers={"User-Agent": "curl/8"})
-                  with urllib.request.urlopen(req, timeout=20) as r:
-                      body = r.read()
-                  print(f"OK    {name}: http {r.status}, {len(body)} bytes")
-              except Exception as e:
-                  print(f"FAIL  {name}: {type(e).__name__} {e}")
-          EOF
-
       - name: Run M30 watcher
         run: |
           mkdir -p state
-          echo "=== STATE BEFORE ==="
-          cat state/utbot_avaxusdt_30m.json 2>/dev/null || echo "(none)"
           python utbot_avaxusdt_30m.py > output_m30.txt 2>&1 || true
-          echo "=== SCRIPT OUTPUT ==="
           cat output_m30.txt
-          echo "=== STATE AFTER ==="
-          cat state/utbot_avaxusdt_30m.json 2>/dev/null || echo "(none)"
 
       - name: Save M30 state
         if: always()
@@ -117,3 +111,21 @@ jobs:
           if [ -n "$OUTPUT" ]; then
             curl -s -X POST -H "Title: AVAX UT Bot 30m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
           fi
+
+      - name: Assert M30 watcher is alive
+        if: always()
+        run: |
+          python3 - <<'EOF'
+          import json, datetime as dt, sys
+          try:
+              s = json.load(open("state/utbot_avaxusdt_30m.json"))
+          except Exception as e:
+              print("M30 state missing/unreadable:", e); sys.exit(1)
+          last = s.get("last_checked_utc")
+          if not last:
+              print("M30 state has no last_checked_utc"); sys.exit(1)
+          t = dt.datetime.fromisoformat(last).astimezone(dt.timezone.utc)
+          age = (dt.datetime.now(dt.timezone.utc) - t).total_seconds()
+          print(f"M30 state age: {age:.0f}s")
+          sys.exit(1 if age > 900 else 0)
+          EOF

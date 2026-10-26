@@ -22,7 +22,7 @@ INTERVAL = "1m"
 KEY = 3.0
 ATR_PERIOD = 4
 STATE = "state/utbot_avaxusdt_1m.json"
-FAPI = "https://fapi.binance.com/fapi/v1"
+FAPI = "https://data-api.binance.vision/api/v3"
 BARS = 400          # plenty for ATR(4)/TS convergence
 U = dt.timezone.utc
 
