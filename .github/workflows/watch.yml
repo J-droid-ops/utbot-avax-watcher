@@ -1,16 +1,14 @@
 name: UT Bot AVAX watcher
 
 on:
+  # Every minute is not honoured by GitHub's scheduler and just gets dropped
+  # (observed: ~1 run per 30-45 min, then nothing at all). A 5-minute tick is
+  # ample for a 30-minute signal and keeps the queue clean.
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
-
-# Serialize ticks so two runs can't restore the same state and both announce.
-concurrency:
-  group: utbot-avax-watcher
-  cancel-in-progress: false
 
 jobs:
   watch-m1:
