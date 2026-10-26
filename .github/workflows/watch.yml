@@ -73,8 +73,13 @@ jobs:
       - name: Run M30 watcher
         run: |
           mkdir -p state
+          echo "=== STATE BEFORE ==="
+          cat state/utbot_avaxusdt_30m.json 2>/dev/null || echo "(none)"
           python utbot_avaxusdt_30m.py > output_m30.txt 2>&1 || true
+          echo "=== SCRIPT OUTPUT ==="
           cat output_m30.txt
+          echo "=== STATE AFTER ==="
+          cat state/utbot_avaxusdt_30m.json 2>/dev/null || echo "(none)"
 
       - name: Save M30 state
         if: always()
