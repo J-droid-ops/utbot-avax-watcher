@@ -70,6 +70,21 @@ jobs:
           restore-keys: |
             utbot-avax-m30-state-
 
+      - name: Debug Binance reachability
+        run: |
+          python3 - <<'EOF'
+          import urllib.request, json, sys
+          url = "https://fapi.binance.com/fapi/v1/klines?symbol=AVAXUSDT&interval=30m&limit=5"
+          try:
+              req = urllib.request.Request(url, headers={"User-Agent": "curl/8"})
+              with urllib.request.urlopen(req, timeout=25) as r:
+                  d = json.load(r)
+              print("BINANCE OK - bars:", len(d), "http", r.status)
+          except Exception as e:
+              print("BINANCE FAILED:", type(e).__name__, "->", e)
+              sys.exit(0)
+          EOF
+
       - name: Run M30 watcher
         run: |
           mkdir -p state
