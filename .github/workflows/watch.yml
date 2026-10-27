@@ -106,3 +106,43 @@ jobs:
           print(f"M30 state age: {age:.0f}s")
           sys.exit(1 if age > 900 else 0)
           EOF
+
+  watch-ema100:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore EMA100 state
+        uses: actions/cache@v4
+        with:
+          path: state
+          key: avax-ema100-1m-state
+          restore-keys: |
+            avax-ema100-1m-state-
+
+      - name: Run EMA100 crossover watcher
+        run: |
+          mkdir -p state
+          python avax_ema100_1m.py > output_ema100.txt 2>&1 || true
+          cat output_ema100.txt
+
+      - name: Push EMA100 to ntfy
+        run: |
+          OUTPUT=$(cat output_ema100.txt)
+          if [ -n "$OUTPUT" ]; then
+            curl -s -X POST -H "Title: AVAX 100 EMA crossover 1m" -H "Tags: chart_with_upwards_trend" -d "$OUTPUT" "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+          fi
+
+      - name: Push EMA100 to Telegram
+        if: always()
+        run: |
+          OUTPUT=$(cat output_ema100.txt)
+          if [ -n "$OUTPUT" ]; then
+            curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+              -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+              -d text="$OUTPUT" \
+              -d parse_mode="HTML"
+          fi
