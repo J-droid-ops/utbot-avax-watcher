@@ -19,16 +19,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      # NOTE: actions/cache is IMMUTABLE for a given key. A fixed key means the
-      # save is always skipped ("Cache hit occurred on the primary key ..., not
-      # saving cache"), so the dedupe state never advances and the watcher
-      # re-primes on every run -> it stays silent forever. The key therefore
-      # rotates per run, and restore-keys picks up the most recent entry.
       - name: Restore M1 state
         uses: actions/cache@v4
         with:
           path: state
-          key: utbot-avax-m1-state-${{ github.run_id }}
+          key: utbot-avax-m1-state
           restore-keys: |
             utbot-avax-m1-state-
 
@@ -37,15 +32,6 @@ jobs:
           mkdir -p state
           python utbot_avaxusdt_1m.py > output_m1.txt 2>&1 || true
           cat output_m1.txt
-
-      - name: Save M1 state
-        if: always()
-        uses: actions/cache@v4
-        with:
-          path: state
-          key: utbot-avax-m1-state-${{ github.run_id }}
-          restore-keys: |
-            utbot-avax-m1-state-
 
       - name: Push M1 to ntfy
         run: |
@@ -86,7 +72,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: state
-          key: utbot-avax-m30-state-${{ github.run_id }}
+          key: utbot-avax-m30-state
           restore-keys: |
             utbot-avax-m30-state-
 
@@ -95,15 +81,6 @@ jobs:
           mkdir -p state
           python utbot_avaxusdt_30m.py > output_m30.txt 2>&1 || true
           cat output_m30.txt
-
-      - name: Save M30 state
-        if: always()
-        uses: actions/cache@v4
-        with:
-          path: state
-          key: utbot-avax-m30-state-${{ github.run_id }}
-          restore-keys: |
-            utbot-avax-m30-state-
 
       - name: Push M30 to ntfy
         run: |
